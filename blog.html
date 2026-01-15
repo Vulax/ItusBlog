@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | ITUS Psihijatrijska Ordinacija</title>
+  <meta name="description" content="Savremeni blog ITUS ordinacije – mentalno zdravlje, psihijatrija i psihoterapija." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+        <link href="bootstrap.min.css" rel="stylesheet">
+
+        <link href="bootstrap-icons.css" rel="stylesheet">
+
+        <link href="owl.carousel.min.css" rel="stylesheet">
+
+        <link href="owl.theme.default.min.css" rel="stylesheet">
+
+        <link href="templatemo-medic-care.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #374151;
+      --accent: #f7801a;
+      --bg: #f5f8f9;
+      --card: #ffffff;
+      --text: #243333;
+      --muted: #6b7c7c;
+      --radius: 18px;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    /* HEADER – koristi postojeći header sajta */
+    /* Ovaj deo ostaje identičan kao na itus.co.rs */
+    header.site-header {
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      padding: 1rem 2rem;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      padding: 5rem 1rem;
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      opacity: 0.95;
+    }
+
+    /* CONTENT */
+    main {
+      max-width: var(--max-width);
+      margin: -4rem auto 4rem;
+      padding: 0 1rem;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .blog-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 2.5rem 2.2rem;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+    }
+
+    .blog-card h2 {
+      font-size: 1.4rem;
+      margin: 1rem 0 0.8rem;
+      color: var(--primary);
+    }
+
+    .blog-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+    }
+
+    .read-more {
+      margin-top: 1.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      align-self: flex-start;
+    }
+
+    .read-more:hover {
+      text-decoration: underline;
+    }
+
+    .blog-card h2 {
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .blog-card h3 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .blog-card p {
+      margin-bottom: 1.2rem;
+      color: var(--text);
+    }
+
+    .blog-card ul {
+      margin: 1.5rem 0 1.5rem 1.5rem;
+    }
+
+    .blog-card li {
+      margin-bottom: 0.6rem;
+    }
+
+    .info-box {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, #eef7f6, #ffffff);
+      border-radius: var(--radius);
+      border-left: 6px solid var(--accent);
+    }
+
+    .info-box h3 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    footer {
+      background: #ffffff;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid #e6eeee;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .blog-card {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
+                <div class="container">
+                    <a class="navbar-brand mx-auto d-lg-none" href="index.html">
+                        Itus
+                        <strong class="d-block">Psihijatrijska Ordinacija</strong>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#hero">Početna</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">O nama</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#galerija">Galerija</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#timeline">Usluge</a>
+                            </li>
+
+                            <a class="navbar-brand d-none d-lg-block" href="index.html">
+                                <!-- Itus
+                                <strong class="d-block">Psihijatrijska Ordinacija</strong> -->
+                                <img src="ItusLogoBezTeksta.png" style="height: 60px;">
+                            </a>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#reviews">Klijenti</a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#blog">Blog</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#booking">Zakazivanje</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#kontakt">Kontakt</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Blog o mentalnom zdravlju</h1>
+    <p style="color:white !important">
+      Stručni tekstovi psihijatara ITUS ordinacije – razumevanje emocija,
+      savremeni pristupi lečenju i saveti za kvalitetniji život.
+    </p>
+  </div>
+</section>
+
+<main>
+  <section class="blog-grid">
+
+  <article class="blog-card">
+    <span class="tag">Mentalno zdravlje</span>
+    <h2>Anksioznost u savremenom dobu</h2>
+    <p>
+      Kako prepoznati simptome anksioznosti, zašto nastaje i kada je važno
+      potražiti stručnu psihijatrijsku pomoć.
+    </p>
+    <a href="#" class="read-more">Pročitaj više →</a>
+  </article>
+
+  <article class="blog-card">
+    <span class="tag">Psihoterapija</span>
+    <h2>Zašto psihoterapija pomaže?</h2>
+    <p>
+      Psihoterapija nije samo razgovor – to je proces koji vodi ka
+      razumevanju sebe, emocija i ponašanja.
+    </p>
+    <a href="#" class="read-more">Pročitaj više →</a>
+  </article>
+
+  <article class="blog-card">
+    <span class="tag">Depresija</span>
+    <h2>Depresija – simptomi i lečenje</h2>
+    <p>
+      Depresija je jedno od najčešćih psihičkih stanja današnjice, ali uz
+      pravilan tretman uspešno se leči.
+    </p>
+    <a href="#" class="read-more">Pročitaj više →</a>
+  </article>
+
+  <article class="blog-card">
+    <span class="tag">Karijera</span>
+    <h2>Profesionalna orijentacija i mentalno zdravlje</h2>
+    <p>
+      Kako izbor karijere utiče na psihičku stabilnost i lično zadovoljstvo.
+    </p>
+    <a href="#" class="read-more">Pročitaj više →</a>
+  </article>
+
+</section>
+</main>
+
+<footer>
+  © 2026 ITUS Psihijatrijska Ordinacija · Sva prava zadržana.
+</footer>
+ <script src="jquery.min.js"></script>
+        <script src="bootstrap.bundle.min.js"></script>
+        <script src="owl.carousel.min.js"></script>
+        <script src="scrollspy.min.js"></script>
+        <script src="custom.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+        <script>
+            Fancybox.bind('[data-fancybox="gallery"]', {
+              //
+            });    
+          </script>
+</body>
+</html>
