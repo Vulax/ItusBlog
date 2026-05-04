@@ -581,5 +581,53 @@
               //
             });    
           </script>
+  <script>
+(function () {
+  var prose  = document.getElementById('itus-prose');
+  var ring   = document.getElementById('itus-ring');
+  var bar    = document.getElementById('itus-bar');
+  var pct    = document.getElementById('itus-pct');
+  var sub    = document.getElementById('itus-sub');
+  var tocs   = document.querySelectorAll('.itus-toc-item');
+  var CIRC   = 138.2;
+ 
+  function readPct() {
+    var rect  = prose.getBoundingClientRect();
+    var total = prose.offsetHeight;
+    var seen  = Math.max(0, -rect.top + window.innerHeight * 0.6);
+    return Math.min(1, Math.max(0, seen / total));
+  }
+ 
+  function update() {
+    var p   = readPct();
+    var val = Math.round(p * 100);
+    ring.style.strokeDashoffset = CIRC * (1 - p);
+    bar.style.width = val + '%';
+    pct.textContent = val + '%';
+    if (val === 0)        sub.textContent = 'Počnite čitati...';
+    else if (val >= 100)  sub.textContent = 'Pročitano!';
+    else                  sub.textContent = '~' + Math.max(1, Math.round(p * 6)) + ' min pročitano';
+ 
+    var active = null;
+    prose.querySelectorAll('h2').forEach(function (h) {
+      if (h.getBoundingClientRect().top < window.innerHeight * 0.45) active = h.id;
+    });
+    tocs.forEach(function (t) {
+      t.classList.toggle('is-active', t.dataset.target === active);
+    });
+  }
+ 
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+ 
+  tocs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      var el = document.getElementById(t.dataset.target);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+})();
+</script>
+ 
 </body>
 </html>
