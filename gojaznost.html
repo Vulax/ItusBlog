@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | ITUS Psihijatrijska Ordinacija</title>
+  <meta name="description" content="Savremeni blog ITUS ordinacije – mentalno zdravlje, psihijatrija i psihoterapija." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+        <link href="bootstrap.min.css" rel="stylesheet">
+
+        <link href="bootstrap-icons.css" rel="stylesheet">
+
+        <link href="owl.carousel.min.css" rel="stylesheet">
+
+        <link href="owl.theme.default.min.css" rel="stylesheet">
+
+        <link href="templatemo-medic-care.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #374151;
+      --accent: #f7801a;
+      --bg: #f5f8f9;
+      --card: #ffffff;
+      --text: #243333;
+      --muted: #6b7c7c;
+      --radius: 18px;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    /* HEADER – koristi postojeći header sajta */
+    /* Ovaj deo ostaje identičan kao na itus.co.rs */
+    header.site-header {
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      padding: 1rem 2rem;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      padding: 5rem 1rem;
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      opacity: 0.95;
+    }
+
+    /* CONTENT */
+    main {
+      max-width: var(--max-width);
+      margin: -4rem auto 4rem;
+      padding: 0 1rem;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .blog-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 2.5rem 2.2rem;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+    }
+
+    .blog-card h2 {
+      font-size: 1.4rem;
+      margin: 1rem 0 0.8rem;
+      color: var(--primary);
+    }
+
+    .blog-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+    }
+
+    .read-more {
+      margin-top: 1.8rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      align-self: flex-start;
+    }
+
+    .read-more:hover {
+      text-decoration: underline;
+    }
+
+    .blog-card h2 {
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .blog-card h3 {
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .blog-card p {
+      margin-bottom: 1.2rem;
+      color: var(--text);
+    }
+
+    .blog-card ul {
+      margin: 1.5rem 0 1.5rem 1.5rem;
+    }
+
+    .blog-card li {
+      margin-bottom: 0.6rem;
+    }
+
+    .info-box {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, #eef7f6, #ffffff);
+      border-radius: var(--radius);
+      border-left: 6px solid var(--accent);
+    }
+
+    .info-box h3 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    footer {
+      background: #ffffff;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid #e6eeee;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .blog-card {
+        padding: 2rem;
+      }
+    }
+
+      .itus-blog-hero {
+     background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #fff;
+    padding: 4rem 1.5rem 5.5rem;
+  }
+  .itus-blog-hero__inner {
+    max-width: var(--max-width, 1100px);
+    margin: auto;
+  }
+  .itus-blog-hero__tag {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 4px 13px;
+    border-radius: 20px;
+    margin-bottom: 1.1rem;
+  }
+  .itus-blog-hero__title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+    max-width: 720px;
+  }
+  .itus-blog-hero__meta {
+    font-size: 0.82rem;
+    opacity: 0.72;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  .itus-blog-hero__meta-sep { opacity: 0.4; }
+ 
+  /* ── LAYOUT ── */
+  .itus-blog-layout {
+    max-width: var(--max-width, 1100px);
+    margin: -2.8rem auto 5rem;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 272px;
+    gap: 28px;
+    align-items: start;
+  }
+ 
+  /* ── ARTICLE ── */
+  .itus-blog-article {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 2.8rem 3rem;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.07);
+  }
+  .itus-blog-prose {
+    font-size: 1rem;
+    line-height: 1.87;
+    color: var(--text);
+  }
+  .itus-blog-prose p { margin-bottom: 1.25em; }
+  .itus-blog-prose h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 2.4em 0 0.7em;
+    padding-top: 0.6em;
+    border-top: 1px solid #e6eeee;
+  }
+  .itus-blog-prose h2:first-child { border-top: none; margin-top: 0; }
+ 
+  .itus-blog-author {
+    margin-top: 2.5rem;
+    padding: 1.4rem 1.6rem;
+    background: var(--bg);
+    border-radius: 12px;
+    border-left: 4px solid var(--accent);
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .itus-blog-author__avatar {
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 14px;
+    flex-shrink: 0;
+  }
+  .itus-blog-author__name { font-size: 0.9rem; font-weight: 700; color: var(--primary); }
+  .itus-blog-author__role { font-size: 0.78rem; color: var(--muted); margin-top: 2px; line-height: 1.5; }
+ 
+  /* ── SIDEBAR ── */
+  .itus-blog-sidebar { display: flex; flex-direction: column; gap: 14px; }
+ 
+  .itus-s-card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 17px 19px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+  .itus-s-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 13px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6eeee;
+  }
+ 
+  /* Reading progress */
+  .itus-prog-wrap { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+  .itus-ring-wrap { position: relative; width: 54px; height: 54px; flex-shrink: 0; }
+  .itus-ring-wrap svg { width: 54px; height: 54px; }
+  .itus-ring-inner {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 11px; font-weight: 700; color: var(--primary);
+  }
+  .itus-read-num { font-size: 1.5rem; font-weight: 700; color: var(--primary); line-height: 1; }
+  .itus-read-sub { font-size: 0.7rem; color: var(--muted); margin-top: 2px; }
+  .itus-prog-bar { height: 3px; background: #e6eeee; border-radius: 2px; margin-bottom: 6px; }
+  .itus-prog-fill { height: 100%; background: var(--accent); border-radius: 2px; width: 0%; transition: width 0.2s; }
+  .itus-prog-sub { font-size: 0.7rem; color: var(--muted); }
+ 
+  /* TOC */
+  .itus-toc-item {
+    padding: 7px 0 7px 12px;
+    border-left: 2px solid #e6eeee;
+    font-size: 0.82rem;
+    color: var(--muted);
+    cursor: pointer;
+    margin-bottom: 4px;
+    line-height: 1.4;
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .itus-toc-item:hover,
+  .itus-toc-item.is-active {
+    border-left-color: var(--accent);
+    color: var(--primary);
+    font-weight: 600;
+  }
+ 
+  /* Tags */
+  .itus-tags-wrap { display: flex; flex-wrap: wrap; gap: 7px; }
+  .itus-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--accent);
+    border: 1px solid rgba(247,128,26,0.3);
+    padding: 4px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .itus-tag:hover { background: rgba(247,128,26,0.08); }
+ 
+  /* Share */
+  .itus-share-grid { display: flex; gap: 7px; flex-wrap: wrap; }
+  .itus-share-btn {
+    flex: 1; min-width: 72px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #d0d9d9;
+    background: transparent;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: background 0.15s;
+  }
+  .itus-share-btn:hover { background: var(--bg); }
+  .itus-share-btn--primary {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+  .itus-share-btn--primary:hover { background: #e0700f; }
+ 
+  @media (max-width: 820px) {
+    .itus-blog-layout { grid-template-columns: 1fr; }
+    .itus-blog-sidebar { order: -1; }
+    .itus-blog-article { padding: 2rem 1.5rem; }
+    .itus-blog-hero__title { font-size: 1.7rem; }
+  }
+
+  </style>
+</head>
+<body>
+
+ <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
+                <div class="container">
+                    <a class="navbar-brand mx-auto d-lg-none" href="index.html">
+                        Itus
+                        <strong class="d-block">Psihijatrijska Ordinacija</strong>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#hero">Početna</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">O nama</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#galerija">Galerija</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#timeline">Usluge</a>
+                            </li>
+
+                            <a class="navbar-brand d-none d-lg-block" href="index.html">
+                                <!-- Itus
+                                <strong class="d-block">Psihijatrijska Ordinacija</strong> -->
+                                <img src="ItusLogoBezTeksta.png" style="height: 60px;">
+                            </a>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#reviews">Klijenti</a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#blog">Blog</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#booking">Zakazivanje</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#kontakt">Kontakt</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+
+<section class="itus-blog-hero">
+  <div class="itus-blog-hero__inner">
+    <span class="itus-blog-hero__tag">Gojaznost</span>
+    <h1 class="itus-blog-hero__title">Gojaznost – savremeni izazov i put ka zdravijem životu</h1>
+    <div class="itus-blog-hero__meta">
+      <span>Aleksandra Putniković</span>
+      <span class="itus-blog-hero__meta-sep">·</span>
+      <span>4. maj 2026</span>
+      <span class="itus-blog-hero__meta-sep">·</span>
+      <span>6 min čitanja</span>
+    </div>
+  </div>
+</section>
+ 
+ 
+<!-- MAIN LAYOUT -->
+<div class="itus-blog-layout">
+ 
+  <!-- ARTICLE -->
+  <article class="itus-blog-article">
+    <div class="itus-blog-prose" id="itus-prose">
+ 
+      <p>Gojaznost predstavlja hronično stanje koje se karakteriše prekomernim nakupljanjem masnog tkiva u organizmu, do te mere da može ugroziti zdravlje. Najčešće se procenjuje pomoću indeksa telesne mase (ITM), pri čemu vrednosti iznad 30 ukazuju na gojaznost. Međutim, važno je naglasiti da gojaznost nije samo estetski problem, već ozbiljno zdravstveno stanje koje zahteva pažnju i adekvatan pristup.</p>
+ 
+      <h2 id="itus-uzroci">Uzroci gojaznosti</h2>
+      <p>Uzroci gojaznosti su složeni i višestruki. Najčešće uključuju nepravilnu ishranu bogatu kalorijama, nedovoljnu fizičku aktivnost, ali i genetske predispozicije, hormonske poremećaje i psihološke faktore poput stresa i emocionalnog prejedanja. Savremeni način života, koji često podrazumeva dugotrajno sedenje i brzu hranu, dodatno doprinosi porastu broja gojaznih osoba širom sveta.</p>
+ 
+      <h2 id="itus-posledice">Posledice po zdravlje</h2>
+      <p>Posledice gojaznosti mogu biti veoma ozbiljne. Ona povećava rizik od brojnih bolesti, kao što su dijabetes tip 2, kardiovaskularne bolesti, povišen krvni pritisak, kao i problemi sa zglobovima i disanjem. Pored fizičkih posledica, gojaznost može imati i značajan uticaj na mentalno zdravlje, dovodeći do smanjenog samopouzdanja i socijalne izolacije.</p>
+ 
+      <h2 id="itus-lecenje">Lečenje i pristup</h2>
+      <p>Lečenje gojaznosti zahteva sveobuhvatan i individualan pristup. Osnova je promena životnih navika, koja podrazumeva uravnoteženu ishranu i redovnu fizičku aktivnost. Preporučuje se postepeno mršavljenje kroz zdrave i održive navike, a ne kroz rigorozne dijete koje često daju kratkoročne rezultate. U nekim slučajevima, uz savet lekara, mogu se primeniti i lekovi ili hirurške metode.</p>
+ 
+      <h2 id="itus-psihologija">Psihološka podrška</h2>
+      <p>Važan deo procesa jeste i psihološka podrška. Promena odnosa prema hrani i razvijanje zdravih obrazaca ponašanja ključni su za dugoročan uspeh. Upravo zbog toga, udruženja i grupe podrške igraju značajnu ulogu, jer omogućavaju razmenu iskustava, motivaciju i osećaj zajedništva.</p>
+      <p>Shodno tim stremljenjima potpisan je Memorandum o saradnji sa Specijalističkom psihijatrijskom ordinacijom "Itus" iz Beograda.</p>
+ 
+      <h2 id="itus-zakljucak">Zaključak</h2>
+      <p>Gojaznost je izazov sa kojim se suočava sve veći broj ljudi, ali uz pravu informisanost, podršku i upornost, moguće je napraviti pozitivne promene. Put ka zdravijem životu nije brz ni lak, ali je dostižan uz male, ali dosledne korake.</p>
+ 
+    </div>
+ 
+    <!-- Autor -->
+    <div class="itus-blog-author">
+      <div class="itus-blog-author__avatar">AP</div>
+      <div>
+        <div class="itus-blog-author__name">Aleksandra Putniković</div>
+        <div class="itus-blog-author__role">Predsednik udruženja za podršku mršavljenju Zdrava nacija</div>
+      </div>
+    </div>
+  </article>
+ 
+ 
+  <!-- SIDEBAR -->
+  <aside class="itus-blog-sidebar">
+ 
+    <!-- Napredak čitanja -->
+    <div class="itus-s-card">
+      <div class="itus-s-label">Napredak čitanja</div>
+      <div class="itus-prog-wrap">
+        <div class="itus-ring-wrap">
+          <svg viewBox="0 0 54 54">
+            <circle cx="27" cy="27" r="22" fill="none" stroke="#e6eeee" stroke-width="3.5"/>
+            <circle id="itus-ring" cx="27" cy="27" r="22" fill="none" stroke="#f7801a" stroke-width="3.5"
+              stroke-dasharray="138.2" stroke-dashoffset="138.2"
+              stroke-linecap="round" transform="rotate(-90 27 27)"/>
+          </svg>
+          <div class="itus-ring-inner" id="itus-pct">0%</div>
+        </div>
+        <div>
+          <div class="itus-read-num">6</div>
+          <div class="itus-read-sub">minuta čitanja</div>
+        </div>
+      </div>
+      <div class="itus-prog-bar"><div class="itus-prog-fill" id="itus-bar"></div></div>
+      <div class="itus-prog-sub" id="itus-sub">Počnite čitati...</div>
+    </div>
+ 
+    <!-- Sadržaj -->
+    <div class="itus-s-card">
+      <div class="itus-s-label">Sadržaj</div>
+      <div class="itus-toc-item" data-target="itus-uzroci">Uzroci gojaznosti</div>
+      <div class="itus-toc-item" data-target="itus-posledice">Posledice po zdravlje</div>
+      <div class="itus-toc-item" data-target="itus-lecenje">Lečenje i pristup</div>
+      <div class="itus-toc-item" data-target="itus-psihologija">Psihološka podrška</div>
+      <div class="itus-toc-item" data-target="itus-zakljucak">Zaključak</div>
+    </div>
+ 
+    <!-- Tagovi -->
+    <div class="itus-s-card">
+      <div class="itus-s-label">Tagovi</div>
+      <div class="itus-tags-wrap">
+        <span class="itus-tag">Gojaznost</span>
+        <span class="itus-tag">Mentalno zdravlje</span>
+        <span class="itus-tag">Ishrana</span>
+        <span class="itus-tag">ITM</span>
+        <span class="itus-tag">Psihijatrija</span>
+        <span class="itus-tag">Zdrav život</span>
+      </div>
+    </div>
+ 
+    <!-- Podelite -->
+    <div class="itus-s-card">
+      <div class="itus-s-label">Podelite</div>
+      <div class="itus-share-grid">
+        <button class="itus-share-btn itus-share-btn--primary" onclick="window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(window.location.href))">LinkedIn</button>
+        <button class="itus-share-btn" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">Facebook</button>
+        <button class="itus-share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='Kopirano!'">Kopiraj link</button>
+      </div>
+    </div>
+ 
+  </aside>
+</div>
+
+
+
+
+<footer>
+  © 2026 ITUS Psihijatrijska Ordinacija · Sva prava zadržana.
+</footer>
+ <script src="jquery.min.js"></script>
+        <script src="bootstrap.bundle.min.js"></script>
+        <script src="owl.carousel.min.js"></script>
+        <script src="scrollspy.min.js"></script>
+        <script src="custom.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+        <script>
+            Fancybox.bind('[data-fancybox="gallery"]', {
+              //
+            });    
+          </script>
+</body>
+</html>
